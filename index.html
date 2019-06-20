@@ -1,0 +1,290 @@
+<HTML>
+<HEAD>
+
+<TITLE>Calculadora</TITLE>
+
+</HEAD>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<BODY>
+
+
+<div>
+
+<p><b>Ingrese Valor Total del Plan</b></p>
+<input id="value1" type="text" value="0"><br>
+<p><b>Ingrese dia de instalación</b></p>
+<input id="value2" type="text" value="0"><br>
+<p><b>Ingrese descuentos</b></p>
+<input id="value3" type="text" value="0"><br>
+<p><b>Ingrese Asist. vtr</b></p>
+<input id="value4" type="text" value="0"><br>
+<p><b>Ingrese Valor Canal Adicional</b></p>
+<input id="value5" type="text" value="0"><br>
+<p><b>Ingrese Valor deco Adicional</b></p>
+<input id="value6" type="text" value="0"><br>
+<p><b>Ingrese cantidad de decos</b></p>
+<input id="value7" type="text" value="0"><br>
+<p><b>Ingrese costo de instalación</b></p>
+<input id="value8" type="text" value="0"><br><br>
+
+
+<button id="multiply">Calcular primera Boleta</button>
+</div>
+<hr>
+<p id="result"></p>
+
+
+
+
+
+
+<script>
+var btnMultiply=document.getElementById("multiply");
+var inputvalue1=document.getElementById("value1");
+var inputvalue2=document.getElementById("value2");
+var inputvalue3=document.getElementById("value3");
+var inputvalue4=document.getElementById("value4");
+var inputvalue5=document.getElementById("value5");
+var inputvalue6=document.getElementById("value6");
+var inputvalue7=document.getElementById("value7");
+var inputvalue8=document.getElementById("value8");	
+      
+var result=document.getElementById('result')
+	    btnMultiply.addEventListener('click',function(e){
+		
+		var val1=parseInt(inputvalue1.value);
+		var val2=parseInt(inputvalue2.value);
+		var val3=parseInt(inputvalue3.value);
+		var val4=parseInt(inputvalue4.value);
+		var val5=parseInt(inputvalue5.value);
+		var val6=parseInt(inputvalue6.value);
+		var val7=parseInt(inputvalue7.value);
+		var val8=parseInt(inputvalue8.value);
+        
+		var diasPropCiclo5 = 5-val2;
+		var diasPropCiclo11 = 11-val2;
+		var diasPropCiclo15 = 15-val2;
+		var diasPropCiclo21 = 21-val2;
+		var diasPropCiclo25 = 25-val2;
+		var diasPropCiclo1 = 32-val2;
+		var diasPropCiclo5_2 = 36-val2;
+		
+		
+		
+		var ServPrin = parseInt(val1-val3);
+		var numDeco = (val6*val7);
+		
+		//ciclo 5
+		var servPrinTotal5 = parseInt(ServPrin + ((val1/30)*diasPropCiclo5));
+		var propPrin5 = parseInt((val1/30)*diasPropCiclo5);
+		
+		var propAsistVTR5 = parseInt((val4/30)*diasPropCiclo5);
+		var propCanAdd5 = parseInt((val5/30)*diasPropCiclo5);
+		var propDecoAdd5 = parseInt(((val6/30)*val7)*diasPropCiclo5); 
+		
+		var totalAdd5 = (propAsistVTR5+propCanAdd5+propDecoAdd5+val4+val5+numDeco+val8);
+		var total5 = totalAdd5+servPrinTotal5;
+		
+		//ciclo 11 
+		var servPrinTotal11 = parseInt(ServPrin + ((val1/30)*diasPropCiclo11));
+		var propPrin11 = parseInt((val1/30)*diasPropCiclo11);
+		
+		var propAsistVTR11 = parseInt((val4/30)*diasPropCiclo11);
+		var propCanAdd11 = parseInt((val5/30)*diasPropCiclo11);
+		var propDecoAdd11 = parseInt(((val6/30)*val7)*diasPropCiclo11);
+		
+		var totalAdd11 = (propAsistVTR11+propCanAdd11+propDecoAdd11+val4+val5+numDeco+val8);
+		var total11 = totalAdd11+servPrinTotal11;
+		
+		
+		//ciclo 15 
+		var servPrinTotal15 = parseInt(ServPrin + ((val1/30)*diasPropCiclo15));
+		var propPrin15 = parseInt((val1/30)*diasPropCiclo15);
+		
+		var propAsistVTR15 = parseInt((val4/30)*diasPropCiclo15);
+		var propCanAdd15 = parseInt((val5/30)*diasPropCiclo15);
+		var propDecoAdd15 = parseInt(((val6/30)*val7)*diasPropCiclo15);
+		
+		var totalAdd15 = (propAsistVTR15+propCanAdd15+propDecoAdd15+val4+val5+numDeco+val8);
+		var total15 = totalAdd15+servPrinTotal15;
+		
+		
+		
+		//ciclo 21 
+		var servPrinTotal21 = parseInt(ServPrin + ((val1/30)*diasPropCiclo21));
+		var propPrin21 = parseInt((val1/30)*diasPropCiclo21);
+		
+		var propAsistVTR21 = parseInt((val4/30)*diasPropCiclo21);
+		var propCanAdd21 = parseInt((val5/30)*diasPropCiclo21);
+		var propDecoAdd21 = parseInt(((val6/30)*val7)*diasPropCiclo21);
+		
+		var totalAdd21 = (propAsistVTR21+propCanAdd21+propDecoAdd21+val4+val5+numDeco+val8);
+		var total21 = totalAdd21+servPrinTotal21;
+		
+		
+		
+		//ciclo 25 
+		var servPrinTotal25 = parseInt(ServPrin + ((val1/30)*diasPropCiclo25));
+		var propPrin25 = parseInt((val1/30)*diasPropCiclo25);
+		
+		var propAsistVTR25 = parseInt((val4/30)*diasPropCiclo25);
+		var propCanAdd25 = parseInt((val5/30)*diasPropCiclo25);
+		var propDecoAdd25 = parseInt(((val6/30)*val7)*diasPropCiclo25);
+		
+		var totalAdd25 = (propAsistVTR25+propCanAdd25+propDecoAdd25+val4+val5+numDeco+val8);
+		var total25 = totalAdd25+servPrinTotal25;
+		
+		
+		
+		//ciclo 1 
+		var servPrinTotal1 = parseInt(ServPrin + ((val1/30)*diasPropCiclo1));
+		var propPrin1 = parseInt((val1/30)*diasPropCiclo1);
+		
+		var propAsistVTR1 = parseInt((val4/30)*diasPropCiclo1);
+		var propCanAdd1 = parseInt((val5/30)*diasPropCiclo1);
+		var propDecoAdd1 = parseInt(((val6/30)*val7)*diasPropCiclo1);
+		
+		var totalAdd1 = (propAsistVTR1+propCanAdd1+propDecoAdd1+val4+val5+numDeco+val8);
+		var total1 = totalAdd1+servPrinTotal1;
+		
+		
+		//ciclo 5 2da parte 
+		var servPrinTotal5_2 = parseInt(ServPrin + ((val1/30)*diasPropCiclo5_2));
+		var propPrin5_2 = parseInt((val1/30)*diasPropCiclo5_2);
+		
+		var propAsistVTR5_2 = parseInt((val4/30)*diasPropCiclo5_2);
+		var propCanAdd5_2 = parseInt((val5/30)*diasPropCiclo5_2);
+		var propDecoAdd5_2 = parseInt(((val6/30)*val7)*diasPropCiclo5_2);
+		
+		var totalAdd5_2 = (propAsistVTR5_2+propCanAdd5_2+propDecoAdd5_2+val4+val5+numDeco+val8);
+		var total5_2 = totalAdd5_2+servPrinTotal5_2;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		if(isNaN(val1)||isNaN(val2)||isNaN(val3)||isNaN(val4)||isNaN(val5)||isNaN(val6)||isNaN(val7)||isNaN(val8)){
+		   result.innerHTML="ALGUNA DE LAS ENTRADAS NO ES VALIDA";
+		   result.style.color="red";
+		}else if (val2 >= 1 && val2 <= 2){
+		   result.innerHTML="Ciclo 5, Pago 22, dias prop "+(diasPropCiclo5)+"<br/><br/>"
+		   +"Servicios Principales "+(ServPrin)+" con "+propPrin5+" Proporcionales"+"<br/><br/>"
+		   +"Proporcionales de Asist. VTR "+ propAsistVTR5+" Pesos"+"<br/>"
+		   +"Proporcionales de Canal Adicional "+ propCanAdd5+" Pesos"+"<br/>"
+		   +"Proporcionales de Decos Adicionales "+ propDecoAdd5+" Pesos"+"<br/><br/>"
+		   +"Costo instalación " + val8+" Pesos"+"<br/><br/><br/>"
+		   +"TOTAL PRIMERA BOLETA "+ total5;
+		   result.style.color="green";
+		   
+		   
+		
+		}else if (val2 >= 3 && val2 <= 6){
+		   result.innerHTML="Ciclo 11, Pago 26 al 27 , dias prop "+(diasPropCiclo11)+"<br/><br/>"
+		   +"Servicios Principales "+(ServPrin)+" con "+propPrin11+" Proporcionales"+"<br/><br/>"
+		   +"Proporcionales de Asist. VTR "+ propAsistVTR11+" Pesos"+"<br/>"
+		   +"Proporcionales de Canal Adicional "+ propCanAdd11+" Pesos"+"<br/>"
+		   +"Proporcionales de Decos Adicionales "+ propDecoAdd11+" Pesos"+"<br/><br/>"
+		   +"Costo instalación " + val8+" Pesos"+"<br/><br/><br/>"
+		   +"TOTAL PRIMERA BOLETA "+ total11;
+		   result.style.color="green";
+		
+		
+		
+		
+		}else if (val2 >= 7 && val2 <= 12){
+		   result.innerHTML="Ciclo 15, Pago 28 al 2 , dias prop "+(diasPropCiclo15)+"<br/><br/>"
+		   +"Servicios Principales "+(ServPrin)+" con "+propPrin15+" Proporcionales"+"<br/><br/>"
+		   +"Proporcionales de Asist. VTR "+ propAsistVTR15+" Pesos"+"<br/>"
+		   +"Proporcionales de Canal Adicional "+ propCanAdd15+" Pesos"+"<br/>"
+		   +"Proporcionales de Decos Adicionales "+ propDecoAdd15+" Pesos"+"<br/><br/>"
+		   +"Costo instalación " + val8+" Pesos"+"<br/><br/><br/>"
+		   +"TOTAL PRIMERA BOLETA "+ total15;
+		   result.style.color="green";
+		   
+		   
+		 }else if (val2 >= 13 && val2 <= 16){
+		   result.innerHTML="Ciclo 21, Pago 3 al 5 , dias prop "+(diasPropCiclo21)+"<br/><br/>"
+		   +"Servicios Principales "+(ServPrin)+" con "+propPrin21+" Proporcionales"+"<br/><br/>"
+		   +"Proporcionales de Asist. VTR "+ propAsistVTR21+" Pesos"+"<br/>"
+		   +"Proporcionales de Canal Adicional "+ propCanAdd21+" Pesos"+"<br/>"
+		   +"Proporcionales de Decos Adicionales "+ propDecoAdd21+" Pesos"+"<br/><br/>"
+		   +"Costo instalación " + val8+" Pesos"+"<br/><br/><br/>"
+		   +"TOTAL PRIMERA BOLETA "+ total21;
+		   result.style.color="green";
+		   
+		   
+		  }else if (val2 >= 17 && val2 <= 21){
+		   result.innerHTML="Ciclo 25, Pago 8 al 10 , dias prop "+(diasPropCiclo25)+"<br/><br/>"
+		   +"Servicios Principales "+(ServPrin)+" con "+propPrin25+" Proporcionales"+"<br/><br/>"
+		   +"Proporcionales de Asist. VTR "+ propAsistVTR25+" Pesos"+"<br/>"
+		   +"Proporcionales de Canal Adicional "+ propCanAdd25+" Pesos"+"<br/>"
+		   +"Proporcionales de Decos Adicionales "+ propDecoAdd25+" Pesos"+"<br/><br/>"
+		   +"Costo instalación " + val8+" Pesos"+"<br/><br/><br/>"
+		   +"TOTAL PRIMERA BOLETA "+ total25;
+		   result.style.color="green";
+		   
+		   
+		   }else if (val2 >= 22 && val2 <= 26){
+		   result.innerHTML="Ciclo 1, Pago 13 al 17 , dias prop "+(diasPropCiclo1)+"<br/><br/>"
+		   +"Servicios Principales "+(ServPrin)+" con "+propPrin1+" Proporcionales"+"<br/><br/>"
+		   +"Proporcionales de Asist. VTR "+ propAsistVTR1+" Pesos"+"<br/>"
+		   +"Proporcionales de Canal Adicional "+ propCanAdd1+" Pesos"+"<br/>"
+		   +"Proporcionales de Decos Adicionales "+ propDecoAdd1+" Pesos"+"<br/><br/>"
+		   +"Costo instalación " + val8+" Pesos"+"<br/><br/><br/>"
+		   +"TOTAL PRIMERA BOLETA "+ total1;
+		   result.style.color="green";
+		   
+		   
+		   }else if (val2 >= 27 && val2 <= 31){
+		   result.innerHTML="Ciclo 5, Pago 18 al 22 , dias prop "+(diasPropCiclo5_2)+"<br/><br/>"
+		   +"Servicios Principales "+(ServPrin)+" con "+propPrin5_2+" Proporcionales"+"<br/><br/>"
+		   +"Proporcionales de Asist. VTR "+ propAsistVTR5_2+" Pesos"+"<br/>"
+		   +"Proporcionales de Canal Adicional "+ propCanAdd5_2+" Pesos"+"<br/>"
+		   +"Proporcionales de Decos Adicionales "+ propDecoAdd5_2+" Pesos"+"<br/><br/>"
+		   +"Costo instalación " + val8+" Pesos"+"<br/><br/><br/>"
+		   +"TOTAL PRIMERA BOLETA "+ total5_2;
+		   result.style.color="green";
+		   
+		   
+		   }else{
+		   
+		   result.innerHTML="Ingrese un dia entre el 1 y el 31"
+		   result.style.color="red";
+		}
+		
+		}
+		);		
+		
+		
+		
+	function validatenumber(){
+		    if (isNaN(this.value)){
+		        this.style.border="2px solid red";	
+			}else{
+                this.style.border="";			
+			
+
+			}
+
+		}
+
+		inputvalue1.addEventListener('keyup',validatenumber)
+		inputvalue2.addEventListener('keyup',validatenumber)
+		inputvalue3.addEventListener('keyup',validatenumber)
+		inputvalue4.addEventListener('keyup',validatenumber)
+		inputvalue5.addEventListener('keyup',validatenumber)
+		inputvalue6.addEventListener('keyup',validatenumber)
+		inputvalue7.addEventListener('keyup',validatenumber)
+		inputvalue8.addEventListener('keyup',validatenumber)
+</script>
+
+
+</BODY>
+
+</HTML>
